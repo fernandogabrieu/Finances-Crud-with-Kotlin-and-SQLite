@@ -8,12 +8,135 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:text="@string/tipo"
+        app:layout_constraintBottom_toBottomOf="@+id/spTipo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/spTipo" />
+
+    <TextView
+        android:id="@+id/tvDetalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detalhe"
+        app:layout_constraintBottom_toBottomOf="@+id/spDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/tvTipo"
+        app:layout_constraintTop_toTopOf="@+id/spDetalhe" />
+
+    <TextView
+        android:id="@+id/tvValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor"
+        app:layout_constraintBottom_toBottomOf="@+id/etValor"
+        app:layout_constraintStart_toStartOf="@+id/tvDetalhe"
+        app:layout_constraintTop_toTopOf="@+id/etValor" />
+
+    <TextView
+        android:id="@+id/tvDataLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_lanc"
+        app:layout_constraintBottom_toBottomOf="@+id/etDataLancamento"
+        app:layout_constraintStart_toStartOf="@+id/tvValor"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+
+    <Button
+        android:id="@+id/btLancar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/lan_ar"
+        app:layout_constraintEnd_toStartOf="@+id/etDataLancamento"
+        app:layout_constraintStart_toStartOf="@+id/tvDataLancamento"
+        app:layout_constraintTop_toBottomOf="@+id/etDataLancamento" />
+
+    <Button
+        android:id="@+id/btLancamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ver_lan_amentos"
+        app:layout_constraintStart_toStartOf="@+id/btLancar"
+        app:layout_constraintTop_toBottomOf="@+id/btLancar" />
+
+    <Button
+        android:id="@+id/btSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/saldo"
+        app:layout_constraintStart_toStartOf="@+id/btLancamentos"
+        app:layout_constraintTop_toBottomOf="@+id/btLancamentos" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/spDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/spDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/spDetalhe"
+        tools:text="Valor" />
+
+    <EditText
+        android:id="@+id/etDataLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Selecione a Data de Lançamento"
+        android:inputType="none"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/etValor"
+        app:layout_constraintStart_toStartOf="@+id/etValor"
+        app:layout_constraintTop_toBottomOf="@+id/etValor"
+        tools:text="Data de Lançamento" />
+
+    <Spinner
+        android:id="@+id/spTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTipo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Credito ou débito" />
+
+    <Spinner
+        android:id="@+id/spDetalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/spTipo"
+        app:layout_constraintTop_toBottomOf="@+id/spTipo"
+        tools:text="Salário ou Tipo de Gasto" />
+
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Saldo: R$ "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btSaldo"
+        app:layout_constraintStart_toEndOf="@+id/btSaldo"
+        app:layout_constraintTop_toTopOf="@+id/btSaldo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

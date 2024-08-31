@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Finances Crud with Kotlin and SQLite</string>
+    <string name="lan_ar">Lançar</string>
+    <string name="saldo">Saldo</string>
+    <string name="ver_lan_amentos">Ver Lançamentos</string>
+    <string name="valor">Valor:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="detalhe">Detalhe:</string>
+    <string name="data_lanc">Data Lanc.:</string>
 </resources>

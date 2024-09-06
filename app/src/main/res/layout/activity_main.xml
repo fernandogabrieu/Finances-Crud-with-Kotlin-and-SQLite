@@ -95,6 +95,7 @@
         android:ems="10"
         android:focusable="false"
         android:hint="@string/selecione_a_data_de_lan_amento"
+        android:importantForAutofill="no"
         android:inputType="none"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/etValor"

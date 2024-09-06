@@ -1,5 +1,6 @@
 package br.edu.utfpr.financescrudwithkotlinandsqlite.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +19,7 @@ class FinancaAdapter(private val financas: MutableList<Financa>) : RecyclerView.
         return FinancaViewHolder(itemView)
     }
 
+    @SuppressLint("DefaultLocale")
     override fun onBindViewHolder(holder: FinancaViewHolder, position: Int) {
         val currentFinanca = financas[position]
         holder.tvTipo.text = String.format("%s - ", currentFinanca.tipo)

@@ -13,17 +13,17 @@ class FinancaAdapter(private val financas: MutableList<Financa>) : RecyclerView.
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): FinancaAdapter.FinancaViewHolder {
+    ): FinancaViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_financa, parent, false)
         return FinancaViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: FinancaAdapter.FinancaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FinancaViewHolder, position: Int) {
         val currentFinanca = financas[position]
-        holder.tvTipo.text = currentFinanca.tipo
-        holder.tvDetalhe.text = currentFinanca.detalhe
+        holder.tvTipo.text = String.format("%s - ", currentFinanca.tipo)
+        holder.tvDetalhe.text = String.format("%s - ", currentFinanca.detalhe)
         holder.tvValor.text = String.format("%.2f", currentFinanca.valor)
-        holder.tvDataLancamento.text = currentFinanca.dataLancamento.toString() // ou formate a data se necessário
+        holder.tvDataLancamento.text = String.format("%s - ", currentFinanca.dataLancamento)
     }
 
     override fun getItemCount() = financas.size

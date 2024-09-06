@@ -78,8 +78,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:hint="@string/r"
         app:layout_constraintEnd_toEndOf="@+id/spDetalhe"
         app:layout_constraintStart_toStartOf="@+id/spDetalhe"
         app:layout_constraintTop_toBottomOf="@+id/spDetalhe"
@@ -92,7 +94,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:focusable="false"
-        android:hint="Selecione a Data de Lançamento"
+        android:hint="@string/selecione_a_data_de_lan_amento"
         android:inputType="none"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/etValor"
@@ -126,17 +128,6 @@
         app:layout_constraintEnd_toEndOf="@+id/spTipo"
         app:layout_constraintTop_toBottomOf="@+id/spTipo"
         tools:text="Salário ou Tipo de Gasto" />
-
-    <TextView
-        android:id="@+id/tvSaldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Saldo: R$ "
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btSaldo"
-        app:layout_constraintStart_toEndOf="@+id/btSaldo"
-        app:layout_constraintTop_toTopOf="@+id/btSaldo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

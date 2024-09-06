@@ -7,4 +7,11 @@
     <string name="tipo">Tipo:</string>
     <string name="detalhe">Detalhe:</string>
     <string name="data_lanc">Data Lanc.:</string>
+    <string name="selecione_a_data_de_lan_amento">Selecione a Data de Lançamento</string>
+    <string name="saldo_r">Saldo: R$</string>
+    <string name="r">R$</string>
+    <string name="Tipo">Tipo</string>
+    <string name="data_de_lan_amento">Data de Lançamento</string>
+    <string name="Valor">Valor</string>
+    <string name="Detalhe">Detalhe</string>
 </resources>

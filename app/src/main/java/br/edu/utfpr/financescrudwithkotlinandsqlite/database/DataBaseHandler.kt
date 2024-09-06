@@ -3,7 +3,6 @@ package br.edu.utfpr.financescrudwithkotlinandsqlite.database
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import br.edu.utfpr.financescrudwithkotlinandsqlite.entity.Financa
@@ -151,20 +150,4 @@ class DataBaseHandler(context : Context) : SQLiteOpenHelper(context, DATABASE_NA
         cursor.close()
         return saldo
     }
-/*
-    fun cursorList() : Cursor {
-        val db = this.writableDatabase
-        val registro = db.query(
-            "financa",
-            null,
-            null, //WHERE
-            null, //argumentos do WHERE
-            null,
-            null,
-            null
-        )
-
-        return registro
-    }
-*/
 }
